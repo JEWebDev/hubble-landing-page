@@ -45,6 +45,13 @@ body {
   color: var(--clr-neutral-100);
   font-family: var(--ff-regular);
 
+  background-color: var(--clr-primary);
+  min-height: 100dvh;
+
+  background-image: url("images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
   position: relative;
 }
 /*
@@ -92,13 +99,6 @@ h6 {
 /*****************/
 
 .landing-page {
-  background-color: var(--clr-primary);
-  min-height: 100dvh;
-
-  background-image: url("images/bg-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-
   padding: 2rem;
 
   display: flex;
@@ -186,4 +186,83 @@ h6 {
 .attribution a {
   color: var(--clr-neutral-100);
   text-decoration: none;
+}
+
+@media (min-width: 760px) {
+  body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    min-width: 100dvw;
+    min-height: 100dvh;
+    background-image: url("images/bg-desktop.svg");
+  }
+
+  .landing-page {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    min-width: 100dvw;
+    min-height: 100dvh;
+
+    > header {
+      max-width: 50%;
+
+      > picture img {
+        width: 100%;
+      }
+    }
+
+    > header .logo {
+      max-width: 300px;
+    }
+
+    > .wrapper {
+      display: flex;
+      padding-top: 40px;
+      max-width: 30%;
+
+      > .register-section h1 {
+        font-size: 2.5rem;
+        max-width: 60%;
+
+        text-align: left;
+      }
+
+      > .register-section p {
+        font-size: 1rem;
+        padding-right: 5rem;
+        text-align: left;
+
+        max-width: 72%;
+      }
+
+      > .register-section .register-button {
+        align-self: flex-start;
+        font-size: 1rem;
+        padding: 1rem 3.5rem;
+      }
+
+      > .social-options {
+        position: absolute;
+        bottom: 4rem;
+        right: 30%;
+        width: fit-content;
+        height: fit-content;
+
+        padding: 0;
+        margin: 0;
+
+        .icon {
+          padding: 0.5rem;
+        }
+        .icon img {
+          min-height: 2rem;
+          min-width: 2rem;
+        }
+      }
+    }
+  }
 }
