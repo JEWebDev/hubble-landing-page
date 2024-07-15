@@ -142,6 +142,12 @@ header .logo {
       border-radius: 2rem;
       margin-top: 1rem;
     }
+
+    .register-button:hover {
+      background-color: var(--clr-accent);
+      color: var(--clr-neutral-100);
+      cursor: pointer;
+    }
   }
 }
 
@@ -161,6 +167,12 @@ footer {
       img {
         width: 1.5rem;
       }
+    }
+
+    li:hover {
+      cursor: pointer;
+      border: 1px solid var(--clr-accent);
+      background-color: var(--clr-accent);
     }
   }
 }
