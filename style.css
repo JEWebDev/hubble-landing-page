@@ -102,6 +102,11 @@ body {
   min-height: 100dvh;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 header .logo {
   max-width: 150px;
 }
@@ -192,11 +197,13 @@ footer {
     background-size: cover;
     background-position-y: center;
 
-    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   header {
-    padding: 2rem 0;
+    padding-top: 2rem;
 
     > .logo {
       max-width: 265px;
@@ -205,7 +212,7 @@ footer {
   main {
     min-height: 67dvh;
     display: flex;
-    align-items: center;
+    padding-top: 4rem;
   }
   .hero-section {
     display: flex;
